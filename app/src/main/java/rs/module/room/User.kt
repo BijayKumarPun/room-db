@@ -48,6 +48,8 @@ import androidx.room.PrimaryKey
 data class User(
    @PrimaryKey val uid:Int,
    val firstName:String?,
-   @ColumnInfo(name = "last_name") val lastName:String?,
-   @Ignore val pictureUrl: String?
-)
+   @ColumnInfo(name = "lastName") val lastName:String?,
+ @Ignore val pictureUrl: String?
+){
+    constructor():this(0,"","","")
+}
