@@ -15,6 +15,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
         /**
          * Note that the Room Database class acts as the main entry point for
          * rest of the app.
@@ -28,6 +29,7 @@ class MainActivity : AppCompatActivity() {
          */
 
         val db = Room.databaseBuilder(this,AppDatabase::class.java,"my-database")
+            .allowMainThreadQueries()
             .build()
 
         /**
@@ -60,7 +62,7 @@ class MainActivity : AppCompatActivity() {
             pictureUrl = "https://random.com/image1"
         )
         val id = userDao.insertAll(user)
-        Toast.makeText(this, "Inserted with id $id",Toast.LENGTH_SHORT).show()
+        Toast.makeText(this@MainActivity, "Inserted with id $id",Toast.LENGTH_SHORT).show()
 
     }
 }

@@ -61,7 +61,7 @@ interface UserDao {
      * Convenience methods
      */
     @Insert
-    fun insertAll(vararg  users:User)
+    fun insertAll( users:User):Long
 
     @Delete
     fun delete(user:User)
