@@ -49,5 +49,5 @@ data class User(
    @PrimaryKey val uid:Int,
    val firstName:String?,
    @ColumnInfo(name = "last_name") val lastName:String?,
-   @Ignore val picture: Bitmap?
+   @Ignore val pictureUrl: String?
 )
