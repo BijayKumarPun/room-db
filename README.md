@@ -17,6 +17,17 @@ Represents tables in the database
 
 > The `Database` provides `DAO` which in turn provides method to make changes in the `data entities`
 
+**Dependency**
+```
+    //dependencies for Room
+
+    implementation 'androidx.room:room-runtime:2.3.0'
+    annotationProcessor 'androidx.room:room-compiler:2.3.0'
+    // To use Kotlin annotation processing tool (kapt)
+    kapt 'androidx.room:room-compiler:2.3.0'
+    // To use Kotlin Symbolic Processing (KSP)
+    kapt 'androidx.room:room-compiler:2.3.0'
+```
 
 While setting up dependencies, make sure to use the `kotlin-kapt` plugin as well.
 
